@@ -1,0 +1,36 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+
+export async function getStaticPaths() {
+	const evenements = await getCollection('evenements');
+	return evenements.map((evenement) => ({
+		params: { slug: evenement.id },
+		props: evenement,
+	}));
+}
+type Props = CollectionEntry<'evenements'>;
+
+const evenement = Astro.props;
+const { Content } = await render(evenement);
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<BaseHead title={evenement.data.title} description={evenement.data.description ?? evenement.data.title} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>{evenement.data.title}</h1>
+				<p>{evenement.data.date.toLocaleDateString('fr-FR')} — {evenement.data.lieu}</p>
+				<Content />
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
