@@ -6,7 +6,8 @@ import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://doc.verglas.cloud",
+  site: "https://freezer49.github.io",
+  base: "/doc/",
   integrations: [mdx(), sitemap()],
   fonts: [
     {

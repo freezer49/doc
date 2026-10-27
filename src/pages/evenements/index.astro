@@ -22,7 +22,7 @@ const evenements = (await getCollection('evenements')).sort(
 			<ul>
 				{evenements.map((evenement) => (
 					<li>
-						<a href={`/evenements/${evenement.id}/`}>
+						<a href={`${import.meta.env.BASE_URL}evenements/${evenement.id}/`}>
 							<h4>{evenement.data.title}</h4>
 							<p>{evenement.data.date.toLocaleDateString('fr-FR')} — {evenement.data.lieu}</p>
 						</a>
