@@ -5,4 +5,6 @@ lieu: Paris
 description: Découverte des content collections
 ---
 
+**Date :** 15 novembre 2026 · **Lieu :** Paris
+
 Description complète de l'événement ici.

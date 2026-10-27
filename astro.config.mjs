@@ -1,36 +1,31 @@
 // @ts-check
 
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import { defineConfig, fontProviders } from "astro/config";
+import starlight from "@astrojs/starlight";
+import starlightCatppuccin from "@catppuccin/starlight";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://freezer49.github.io",
   base: "/doc/",
-  integrations: [mdx(), sitemap()],
-  fonts: [
-    {
-      provider: fontProviders.local(),
-      name: "Atkinson",
-      cssVariable: "--font-atkinson",
-      fallbacks: ["sans-serif"],
-      options: {
-        variants: [
-          {
-            src: ["./src/assets/fonts/atkinson-regular.woff"],
-            weight: 400,
-            style: "normal",
-            display: "swap",
-          },
-          {
-            src: ["./src/assets/fonts/atkinson-bold.woff"],
-            weight: 700,
-            style: "normal",
-            display: "swap",
-          },
-        ],
+  integrations: [
+    starlight({
+      title: "Ma doc",
+      defaultLocale: "root",
+      locales: {
+        root: { label: "Français", lang: "fr" },
       },
-    },
+      plugins: [
+        starlightCatppuccin({
+          dark: { flavor: "macchiato", accent: "sky" },
+          light: { flavor: "latte", accent: "sky" },
+        }),
+      ],
+      sidebar: [
+        { label: "Guides", items: [{ autogenerate: { directory: "guides" } }] },
+        { label: "Ressources", items: [{ autogenerate: { directory: "ressources" } }] },
+        { label: "Événements", items: [{ autogenerate: { directory: "evenements" } }] },
+      ],
+    }),
   ],
 });

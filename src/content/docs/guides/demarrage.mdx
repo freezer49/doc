@@ -1,0 +1,38 @@
+---
+title: Démarrage
+description: Installer le projet et lancer le serveur de développement.
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+## Prérequis
+
+Node.js 22 ou plus récent.
+
+## Installation
+
+<Tabs syncKey="pkg">
+  <TabItem label="npm">
+    ```sh
+    npm install
+    ```
+  </TabItem>
+  <TabItem label="pnpm">
+    ```sh
+    pnpm install
+    ```
+  </TabItem>
+  <TabItem label="yarn">
+    ```sh
+    yarn
+    ```
+  </TabItem>
+</Tabs>
+
+## Lancer le site
+
+```sh title="Terminal"
+npm run dev
+```
+
+Les pages se trouvent dans `src/content/docs/`. Chaque fichier `.md` ou `.mdx` devient une page, et la barre latérale se remplit automatiquement.
