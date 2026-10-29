@@ -10,7 +10,7 @@ export default defineConfig({
   base: "/doc/",
   integrations: [
     starlight({
-      title: "Ma doc",
+      title: "La doc de cloclo",
       defaultLocale: "root",
       locales: {
         root: { label: "Français", lang: "fr" },
@@ -23,8 +23,65 @@ export default defineConfig({
       ],
       sidebar: [
         { label: "Guides", items: [{ autogenerate: { directory: "guides" } }] },
-        { label: "Ressources", items: [{ autogenerate: { directory: "ressources" } }] },
-        { label: "Événements", items: [{ autogenerate: { directory: "evenements" } }] },
+        {
+          label: "Langages",
+          items: [
+            {
+              label: "JavaScript",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "langages/javascript" } }],
+            },
+          ],
+        },
+        {
+          label: "Bases de données",
+          items: [
+            {
+              label: "SQL",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "bases-de-donnees/sql" } }],
+            },
+          ],
+        },
+        {
+          label: "Algorithmes",
+          items: [
+            {
+              label: "Tri",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "algorithmes/tri" } }],
+            },
+          ],
+        },
+        {
+          label: "Tests",
+          items: [
+            {
+              label: "Java (JUnit / Mockito)",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "tests/java" } }],
+            },
+          ],
+        },
+        {
+          label: "Outils",
+          items: [
+            {
+              label: "Git",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "outils/git" } }],
+            },
+            "outils/raccourcis",
+          ],
+        },
+        {
+          label: "Ressources",
+          items: [{ autogenerate: { directory: "ressources" } }],
+        },
+        {
+          label: "Événements",
+          items: [{ autogenerate: { directory: "evenements" } }],
+        },
       ],
     }),
   ],

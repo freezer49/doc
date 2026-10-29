@@ -1,21 +1,24 @@
 ---
-title: Ma doc
-description: Ressources et événements autour d'Astro.
+title: La doc de cloclo
+description: Mes mémos et ressources pour coder au quotidien.
 template: splash
 hero:
-  tagline: Ressources et événements autour d'Astro.
+  tagline: Mes mémos et ressources pour coder au quotidien.
   actions:
-    - text: Commencer
-      link: guides/demarrage/
+    - text: JavaScript
+      link: langages/javascript/bases/
       icon: right-arrow
     - text: Ressources
-      link: ressources/example/
+      link: ressources/s-entrainer/
       variant: minimal
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid>
+  <Card title="Langages" icon="seti:javascript">
+    Fiches mémo par langage : syntaxe, méthodes, pièges.
+  </Card>
   <Card title="Ressources" icon="open-book">
     Images, vidéos, outils… rangés par catégorie.
   </Card>
