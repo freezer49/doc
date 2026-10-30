@@ -5,7 +5,7 @@ sidebar:
   order: 3
 ---
 
-Pour les plateformes d'entraînement, voir [S'entraîner à coder → SQL](../../../ressources/s-entrainer/#sql).
+Pour les plateformes d'entraînement, voir [S'entraîner à coder → SQL](../../../ressources/apprendre/s-entrainer/#sql).
 
 ## Jours 1 à 5 : les fondamentaux
 

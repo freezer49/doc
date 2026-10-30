@@ -76,11 +76,22 @@ export default defineConfig({
         },
         {
           label: "Ressources",
-          items: [{ autogenerate: { directory: "ressources" } }],
-        },
-        {
-          label: "Événements",
-          items: [{ autogenerate: { directory: "evenements" } }],
+          items: [
+            {
+              label: "Apprendre",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "ressources/apprendre" } }],
+            },
+            {
+              label: "Design",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "ressources/design" } }],
+            },
+            "ressources/developpement",
+            "ressources/organisation",
+            "ressources/numerique-responsable",
+            "ressources/game-dev",
+          ],
         },
       ],
     }),

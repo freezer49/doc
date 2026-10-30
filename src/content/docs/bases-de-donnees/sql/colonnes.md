@@ -80,5 +80,5 @@ CREATE TABLE users (
 ```
 
 :::tip
-Pour dessiner tes tables et leurs relations avant de les coder, utilise [DrawSQL](https://drawsql.app/) (voir [Sites utilitaires](../../../ressources/utilitaires/#bases-de-données)).
+Pour dessiner tes tables et leurs relations avant de les coder, utilise [DrawSQL](https://drawsql.app/) (voir [Ressources → Développement](../../../ressources/developpement/#bases-de-données)).
 :::
