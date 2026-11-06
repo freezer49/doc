@@ -34,6 +34,21 @@ export default defineConfig({
           ],
         },
         {
+          label: "Frameworks",
+          items: [
+            {
+              label: "Vue 3",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "frameworks/vue" } }],
+            },
+            {
+              label: "Vuetify 3",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "frameworks/vuetify" } }],
+            },
+          ],
+        },
+        {
           label: "Bases de données",
           items: [
             {
