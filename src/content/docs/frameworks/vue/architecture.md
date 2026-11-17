@@ -48,6 +48,8 @@ export const dossierGateway =
 - `import.meta.env` : variables d'environnement Vite, définies dans `.env.local`.
 - Seul ce fichier sait lequel est utilisé. Les composants ne changent pas.
 
+Pour le schéma de la chaîne, une métaphore de chaque rôle et des conseils pratiques, voir [Données mockées et chaîne de données](../donnees-mockees/).
+
 ## Organisation d'un projet Vue
 
 ```

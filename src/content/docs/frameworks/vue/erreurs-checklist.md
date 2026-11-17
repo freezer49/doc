@@ -2,7 +2,7 @@
 title: Erreurs fréquentes et checklist
 description: Mémo des erreurs classiques et checklist avant de valider un composant.
 sidebar:
-  order: 9
+  order: 10
 ---
 
 ## Erreurs fréquentes
